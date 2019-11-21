@@ -1,6 +1,8 @@
 {
   "name": "@cicadoidea/actor",
   "title": "Actor",
+  "main": "src/actor.js",
+  "files": [ "src" ],
   "version": "0.0.1",
   "license": "GPL-3.0-or-later",
   "author": "Xie Yuheng",
