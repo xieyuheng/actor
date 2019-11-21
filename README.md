@@ -13,16 +13,16 @@ const { actor_t } = require('@cicadoidea/actor')
 
 let a = new actor_t()
 
-a.on('ping', sender => {
+a.on('ping', re => {
   console.log('a on ping')
-  sender.send('pong', a)
+  re.send('pong', a)
 })
 
 let b = new actor_t()
 
-b.on('pong', sender => {
+b.on('pong', re => {
   console.log('b on pong')
-  sender.send('ping', b)
+  re.send('ping', b)
 })
 
 a.send('ping', b) // loop forever
