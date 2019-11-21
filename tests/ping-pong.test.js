@@ -2,22 +2,20 @@ const { actor_t } = require('../src/actor')
 
 let a = new actor_t()
 
-a.on('ping', the => {
-  console.log('ping')
-  the.sender.send('pong', {
-    sender: a
-  })
+a.on('ping', sender => {
+  console.log('a on ping')
+  sender.send('pong', a)
 })
 
 let b = new actor_t()
 
-b.on('pong', the => {
-  console.log('pong')
-  the.sender.send('ping', {
-    sender: b
-  })
+b.on('pong', sender => {
+  console.log('b on pong')
+  sender.send('ping', b)
 })
 
-a.send('ping', {
-  sender: b
-})
+a.send('ping', b) // loop forever
+
+setTimeout(() => {
+  process.exit()
+}, 300)
