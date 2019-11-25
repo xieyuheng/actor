@@ -1,4 +1,4 @@
-const { actor_t } = require('../src/actor')
+const { actor_t } = require('../lib/actor')
 
 let a = new actor_t()
 

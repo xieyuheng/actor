@@ -9,7 +9,7 @@ Actor model for nodejs.
 ### Basic ping-pong
 
 ``` js
-const { actor_t } = require('@cicadoidea/actor')
+const { actor_t } = require('@cicadoidea/actor/lib/actor')
 
 let a = new actor_t()
 
