@@ -9,7 +9,7 @@ function test_prog_ext {
     prog=$1
     ext=$2
 
-    for file in $(find . | grep "^\./tests/" | grep "\.test.*$" | grep "\.${ext}$")
+    for file in $(find . | grep "^\./lib/" | grep "\.test.*$" | grep "\.${ext}$")
     do
         echo ""
         echo "[test] $file"
