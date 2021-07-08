@@ -1,13 +1,15 @@
-# scala
-target
+# typescript
+lib
 
-# parcel
-.cache
-
-# js
+# npm
 node_modules
+
+# 0x
+*.0x/
 
 # emacs
 *~
 *#*
 .#*
+
+.vercel
